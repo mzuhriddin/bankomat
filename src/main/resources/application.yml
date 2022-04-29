@@ -1,0 +1,29 @@
+server:
+  port: 80
+spring:
+  mvc:
+    servlet:
+      path: /api
+  main:
+    lazy-initialization: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/bankomat
+    password: 2002
+    username: postgres
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  sql:
+    init:
+      mode: always
+jwt:
+  secretKey: SupperKey
+  expireTime: 864000000
+company:
+  domain: http://localhost:8080/
+  email:
+    address: zuhriddin.musabayev.2002@gmail.com
+    password: mzuhriddin2002@
